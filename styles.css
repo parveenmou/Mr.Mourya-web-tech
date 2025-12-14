@@ -607,6 +607,12 @@ a {
 /* ========== MOBILE ANIMATED SERVICE CARDS ========== */
 
 @media (max-width: 768px) {
+    /* Project box preview height - 40% on mobile */
+    .project-box > div:first-child {
+        aspect-ratio: auto !important;
+        height: 40vh !important;
+    }
+
     /* Override Tailwind classes on mobile */
     .scroll-animate {
         opacity: 1 !important;
