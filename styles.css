@@ -1,0 +1,659 @@
+/* ============================================
+   PORTFOLIO WEBSITE - MAIN CSS FILE
+   All styling for home page and components
+   ============================================ */
+
+/* ========== ROOT & TYPOGRAPHY ========== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(250, 204, 21);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(253, 224, 71);
+}
+
+/* ========== ICON INITIALIZATION ========== */
+[data-lucide] {
+    width: 24px;
+    height: 24px;
+}
+
+svg[data-lucide] {
+    stroke-width: 2;
+}
+
+/* ========== GLOBAL ANIMATIONS ========== */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes float-delay {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes flowStream1 {
+    0%, 100% {
+        transform: translateX(-50px) translateY(0);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateX(20px) translateY(-10px);
+        opacity: 0.8;
+    }
+}
+
+@keyframes flowStream2 {
+    0%, 100% {
+        transform: translateX(50px) translateY(10px);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateX(-20px) translateY(0);
+        opacity: 0.7;
+    }
+}
+
+@keyframes flowStream3 {
+    0%, 100% {
+        transform: translateY(20px) scaleX(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-10px) scaleX(1.1);
+        opacity: 0.6;
+    }
+}
+
+/* ========== ANIMATED BORDER LOADING EFFECT (Mobile) ========== */
+
+@keyframes borderDotMotion {
+    0% {
+        border-top-color: rgba(250, 204, 21, 1);
+        border-right-color: rgba(250, 204, 21, 0.3);
+        border-bottom-color: rgba(250, 204, 21, 0.3);
+        border-left-color: rgba(250, 204, 21, 0.3);
+        box-shadow: 0 0 15px rgba(250, 204, 21, 0.5), inset 0 0 15px rgba(250, 204, 21, 0.1);
+    }
+    25% {
+        border-top-color: rgba(250, 204, 21, 0.3);
+        border-right-color: rgba(250, 204, 21, 1);
+        border-bottom-color: rgba(250, 204, 21, 0.3);
+        border-left-color: rgba(250, 204, 21, 0.3);
+        box-shadow: 0 0 15px rgba(250, 204, 21, 0.5), inset 0 0 15px rgba(250, 204, 21, 0.1);
+    }
+    50% {
+        border-top-color: rgba(250, 204, 21, 0.3);
+        border-right-color: rgba(250, 204, 21, 0.3);
+        border-bottom-color: rgba(250, 204, 21, 1);
+        border-left-color: rgba(250, 204, 21, 0.3);
+        box-shadow: 0 0 15px rgba(250, 204, 21, 0.5), inset 0 0 15px rgba(250, 204, 21, 0.1);
+    }
+    75% {
+        border-top-color: rgba(250, 204, 21, 0.3);
+        border-right-color: rgba(250, 204, 21, 0.3);
+        border-bottom-color: rgba(250, 204, 21, 0.3);
+        border-left-color: rgba(250, 204, 21, 1);
+        box-shadow: 0 0 15px rgba(250, 204, 21, 0.5), inset 0 0 15px rgba(250, 204, 21, 0.1);
+    }
+    100% {
+        border-top-color: rgba(250, 204, 21, 1);
+        border-right-color: rgba(250, 204, 21, 0.3);
+        border-bottom-color: rgba(250, 204, 21, 0.3);
+        border-left-color: rgba(250, 204, 21, 0.3);
+        box-shadow: 0 0 15px rgba(250, 204, 21, 0.5), inset 0 0 15px rgba(250, 204, 21, 0.1);
+    }
+}
+
+/* ========== UTILITY CLASSES ========== */
+
+.floating-card {
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-card-delay {
+    animation: float-delay 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+.slide-down {
+    animation: slideDown 0.3s ease;
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ========== ICON HOVER EFFECTS ========== */
+
+.icon-container {
+    transition: all 0.3s ease;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container:hover {
+    transform: translateY(-6px) scale(1.15);
+}
+
+.icon-container img {
+    transition: filter 0.3s ease, transform 0.3s ease;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.icon-container:hover img {
+    filter: brightness(1.3) drop-shadow(0 0 8px rgba(250, 204, 21, 0.6));
+}
+
+/* ========== SCROLL ANIMATIONS ========== */
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-animate {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-animate.visible {
+    animation: slideInUp 0.6s ease-out forwards;
+}
+
+/* ========== NAVIGATION BAR ========== */
+
+#navbar {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(107, 114, 128, 0.2);
+}
+
+#navbar.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#mobile-menu.active {
+    display: flex !important;
+}
+
+/* ========== HERO SECTION ========== */
+
+#home {
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 50%, #000 100%);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: transform 0.5s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
+}
+
+/* ========== TECH STACK BOX ========== */
+
+.tech-stack-box {
+    position: relative;
+    margin-top: 0;
+    border-radius: 0.875rem;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(31, 41, 55, 0.3) 100%);
+    border: 2px solid rgba(34, 197, 94, 0.3);
+    overflow: hidden;
+}
+
+.tech-stack-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    min-height: 6rem;
+}
+
+.tech-stack-content p {
+    margin: 0;
+}
+
+.tech-stack-main {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.tech-stack-subtitle {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgb(34, 211, 238);
+    margin-bottom: 0.5rem;
+}
+
+.tech-stack-author {
+    font-size: 0.75rem;
+    color: rgb(107, 114, 128);
+}
+
+/* ========== FLOATING BADGES ========== */
+
+/* ROAS Badge - Top Left */
+.badge-roas {
+    position: absolute;
+    top: -1rem;
+    left: -2rem;
+    background-color: rgb(17, 24, 39);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgb(55, 65, 81);
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 1);
+    animation: float 3s ease-in-out infinite;
+    z-index: 20;
+}
+
+.badge-roas .badge-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgba(250, 204, 21, 0.2);
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.5rem;
+}
+
+.badge-roas .badge-label {
+    font-size: 0.75rem;
+    color: rgb(156, 163, 175);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge-roas .badge-value {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Conversion Badge - Top Right */
+.badge-conversion {
+    position: absolute;
+    top: -1.5rem;
+    right: -2rem;
+    background-color: rgb(17, 24, 39);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgb(55, 65, 81);
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 1);
+    animation: float 3s ease-in-out infinite 0.5s;
+    z-index: 20;
+}
+
+.badge-conversion .badge-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgba(107, 114, 128, 0.5);
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.5rem;
+}
+
+.badge-conversion .badge-label {
+    font-size: 0.75rem;
+    color: rgb(156, 163, 175);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge-conversion .badge-value {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Meta Certified Badge - Left Mid */
+.badge-meta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -2rem;
+    background-color: rgb(17, 24, 39);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgb(55, 65, 81);
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 1);
+    animation: float 3s ease-in-out infinite;
+    z-index: 20;
+}
+
+.badge-meta .badge-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgba(59, 130, 246, 0.3);
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.5rem;
+}
+
+.badge-meta .badge-label {
+    font-size: 0.75rem;
+    color: rgb(156, 163, 175);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge-meta .badge-text {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Shopify Expert Badge - Right Mid */
+.badge-shopify {
+    position: absolute;
+    top: 33%;
+    right: -2rem;
+    background-color: rgb(17, 24, 39);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgb(55, 65, 81);
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 1);
+    animation: float 3s ease-in-out infinite 0.5s;
+    z-index: 20;
+}
+
+.badge-shopify .badge-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgba(34, 197, 94, 0.3);
+    border-radius: 0.5rem;
+    padding: 0.375rem 0.5rem;
+}
+
+.badge-shopify .badge-label {
+    font-size: 0.75rem;
+    color: rgb(156, 163, 175);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge-shopify .badge-text {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* ========== TYPEWRITER SECTION ========== */
+
+#typewriter {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(31, 41, 55, 0.3) 100%);
+}
+
+.typewriter-text {
+    display: inline-block;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.2;
+    text-align: left;
+    min-height: 80px;
+    font-size: inherit;
+}
+
+/* ========== PORTFOLIO SECTION ========== */
+
+.filter-btn.active {
+    background-color: rgb(250, 204, 21);
+    color: black;
+}
+
+.filter-btn:not(.active) {
+    cursor: pointer;
+}
+
+.filter-btn:not(.active):hover {
+    background-color: rgba(250, 204, 21, 0.1);
+    color: white;
+}
+
+.portfolio-item {
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.portfolio-item.hidden-item {
+    display: none;
+    opacity: 0;
+}
+
+.portfolio-grid {
+    transition: all 0.3s ease;
+}
+
+#portfolio-grid {
+    display: grid;
+}
+
+#portfolio-grid .portfolio-item {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#portfolio-grid .portfolio-item.hidden-item {
+    pointer-events: none;
+}
+
+/* ========== CONTACT SECTION ========== */
+
+#contact {
+    background: linear-gradient(135deg, rgba(250, 204, 21, 0.05) 0%, rgba(107, 114, 128, 0.05) 100%);
+}
+
+/* ========== SELECTION STYLE ========== */
+::selection {
+    background-color: rgb(250, 204, 21);
+    color: rgb(0, 0, 0);
+}
+
+::-moz-selection {
+    background-color: rgb(250, 204, 21);
+    color: rgb(0, 0, 0);
+}
+
+/* ========== FOCUS STATES ========== */
+:focus-visible {
+    outline: 2px solid rgb(250, 204, 21);
+    outline-offset: 2px;
+}
+
+/* ========== SMOOTH TRANSITIONS ========== */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+button,
+a {
+    transition: all 0.3s ease;
+}
+
+/* ========== PROJECT BOXES STYLING ========== */
+
+.project-box {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-box:hover {
+    border-color: rgb(107, 114, 128) !important;
+    transform: translateY(-4px);
+}
+
+.project-box > div:first-child {
+    animation: slideInUp 0.6s ease-out;
+}
+
+.project-box > div:first-child i {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ========== MOBILE ANIMATED SERVICE CARDS ========== */
+
+@media (max-width: 768px) {
+    /* Project box preview height - 40% on mobile */
+    .project-box > div:first-child {
+        aspect-ratio: auto !important;
+        height: 40vh !important;
+    }
+
+    /* Override Tailwind classes on mobile */
+    .scroll-animate {
+        opacity: 1 !important;
+        border: 2px solid rgba(250, 204, 21, 0.8) !important;
+        border-color: rgba(250, 204, 21, 0.8) !important;
+        animation: borderDotMotion 4s linear infinite !important;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(31, 41, 55, 0.3)) !important;
+        box-shadow: 0 0 20px rgba(250, 204, 21, 0.3), inset 0 0 10px rgba(250, 204, 21, 0.05) !important;
+        transition: none !important;
+        transform: none !important;
+    }
+    
+    /* Keep animation for visible state */
+    .scroll-animate.visible {
+        opacity: 1 !important;
+        border: 2px solid rgba(250, 204, 21, 0.8) !important;
+        animation: borderDotMotion 4s linear infinite !important;
+    }
+    
+    /* Completely override hover on mobile */
+    .scroll-animate:hover,
+    .scroll-animate.group:hover,
+    .scroll-animate.group:hover {
+        opacity: 1 !important;
+        transform: none !important;
+        border: 2px solid rgba(250, 204, 21, 0.8) !important;
+        box-shadow: 0 0 20px rgba(250, 204, 21, 0.3), inset 0 0 10px rgba(250, 204, 21, 0.05) !important;
+        animation: borderDotMotion 4s linear infinite !important;
+    }
+
+    /* Project tabs responsive on mobile */
+    .project-tab {
+        flex: 1 1 auto;
+        min-width: 140px;
+    }
+
+    .project-content {
+        display: none;
+    }
+
+    .project-content.active {
+        display: block;
+    }
+}
