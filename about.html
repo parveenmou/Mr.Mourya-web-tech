@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Parveen Kumar | Web Developer & Digital Marketing Expert</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        .scroll-reveal {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.8s ease-out;
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-300 font-sans selection:bg-yellow-400 selection:text-black">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex flex-col">
+                <div class="text-xl sm:text-2xl font-bold tracking-tighter leading-tight">
+                    <span class="text-white">Mr. Mourya</span>
+                    <span class="text-cyan-400 ml-2">web and tech</span>
+                </div>
+                <div class="text-xs text-gray-500">Mr. parveen Kumar Mourya</div>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#home" class="text-sm font-medium hover:text-yellow-400 transition-colors">Home</a>
+                <a href="about.html" class="text-sm font-medium text-yellow-400 transition-colors">About</a>
+                <a href="index.html#work" class="text-sm font-medium hover:text-yellow-400 transition-colors">Work</a>
+                <a href="index.html#contact" class="px-5 py-2.5 bg-yellow-400 text-black font-bold rounded-full hover:bg-yellow-300 transition-all transform hover:scale-105">Let's Talk</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-gray-900 border-b border-gray-700 p-6 flex flex-col space-y-4 shadow-2xl">
+            <a href="index.html#home" class="text-lg font-medium text-gray-300 hover:text-yellow-400">Home</a>
+            <a href="about.html" class="text-lg font-medium text-yellow-400">About</a>
+            <a href="index.html#work" class="text-lg font-medium text-gray-300 hover:text-yellow-400">Work</a>
+            <a href="index.html#contact" class="text-lg font-medium text-gray-300 hover:text-yellow-400">Let's Talk</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden">
+        <!-- Background Gradients -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-yellow-600/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-cyan-600/10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center space-x-2 bg-gray-900 border border-gray-700 rounded-full px-4 py-2 mb-6">
+                <span class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
+                <span class="text-xs lg:text-sm font-medium text-gray-300">Get to know me</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6">
+                About <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-400">Parveen Kumar</span>
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto">
+                Turning ambitious ideas into high-performing digital experiences that actually drive revenue.
+            </p>
+        </div>
+    </section>
+
+    <!-- My Story Section -->
+    <section class="py-20 px-6 relative overflow-hidden">
+        <div class="absolute top-1/2 left-0 w-72 h-72 bg-yellow-600/5 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-5xl mx-auto">
+            <div class="scroll-reveal">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 text-center">
+                    My <span class="text-yellow-400">Story</span>
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-yellow-400 to-cyan-400 mx-auto mb-12"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="scroll-reveal space-y-6">
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        What started as a curiosity-driven exploration into web development in 2020 quickly turned into a mission. 
+                        While many developers focus solely on aesthetics or others purely on marketing metrics, I saw an opportunity 
+                        to bridge both worlds—creating websites that don't just look stunning but actually convert visitors into customers.
+                    </p>
+                    
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        My breakthrough came with Decor Bae, where I combined high-end web design with data-driven advertising strategies 
+                        to generate over ₹22 lakhs in sales. That success validated my approach: technology and marketing aren't separate—they're 
+                        two sides of the same coin. Since then, I've built 50+ websites and managed campaigns that consistently deliver 300%+ ROI.
+                    </p>
+                    
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Today, I integrate AI and automation into everything I build, ensuring clients get not just a website or ad campaign, 
+                        but a complete growth system that works 24/7. What makes me different? I don't just execute—I strategize, optimize, 
+                        and continuously improve results based on real data.
+                    </p>
+                </div>
+
+                <div class="scroll-reveal relative">
+                    <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-cyan-400/20 rounded-2xl blur-xl"></div>
+                    <div class="relative bg-gray-900 border border-gray-800 rounded-2xl p-8 space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-yellow-400/10 rounded-lg">
+                                <i data-lucide="target" class="w-6 h-6 text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg mb-2">Mission-Driven</h3>
+                                <p class="text-gray-400 text-sm">Every project is about creating measurable impact, not just delivering files.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-cyan-400/10 rounded-lg">
+                                <i data-lucide="brain" class="w-6 h-6 text-cyan-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg mb-2">Data-Obsessed</h3>
+                                <p class="text-gray-400 text-sm">Decisions backed by analytics, A/B testing, and continuous optimization.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-yellow-400/10 rounded-lg">
+                                <i data-lucide="zap" class="w-6 h-6 text-yellow-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-bold text-lg mb-2">Future-Ready</h3>
+                                <p class="text-gray-400 text-sm">Early adopter of AI, automation, and cutting-edge tech that gives you an edge.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="py-20 px-6 bg-gradient-to-b from-black to-gray-900/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="scroll-reveal text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Core <span class="text-yellow-400">Values</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    The principles that guide every decision and project
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Value 1 -->
+                <div class="scroll-reveal group bg-gray-900 border border-gray-800 hover:border-yellow-400 rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105">
+                    <div class="p-4 bg-yellow-400/10 rounded-xl w-fit mb-6 group-hover:bg-yellow-400/20 transition-all">
+                        <i data-lucide="lightbulb" class="w-8 h-8 text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-3">Innovation</h3>
+                    <p class="text-gray-400">Constantly exploring new technologies and strategies to stay ahead of the curve and deliver cutting-edge solutions.</p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="scroll-reveal group bg-gray-900 border border-gray-800 hover:border-yellow-400 rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105">
+                    <div class="p-4 bg-cyan-400/10 rounded-xl w-fit mb-6 group-hover:bg-cyan-400/20 transition-all">
+                        <i data-lucide="award" class="w-8 h-8 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-3">Quality</h3>
+                    <p class="text-gray-400">Never compromising on excellence. Every pixel, every line of code, every ad is crafted with meticulous attention to detail.</p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="scroll-reveal group bg-gray-900 border border-gray-800 hover:border-yellow-400 rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105">
+                    <div class="p-4 bg-yellow-400/10 rounded-xl w-fit mb-6 group-hover:bg-yellow-400/20 transition-all">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-3">Growth</h3>
+                    <p class="text-gray-400">Committed to continuous learning and improvement. Your success drives my evolution as a professional.</p>
+                </div>
+
+                <!-- Value 4 -->
+                <div class="scroll-reveal group bg-gray-900 border border-gray-800 hover:border-yellow-400 rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105">
+                    <div class="p-4 bg-cyan-400/10 rounded-xl w-fit mb-6 group-hover:bg-cyan-400/20 transition-all">
+                        <i data-lucide="eye" class="w-8 h-8 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-3">Transparency</h3>
+                    <p class="text-gray-400">Clear communication, honest timelines, and real metrics. You'll always know exactly what's happening with your project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Expertise Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="scroll-reveal text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Skills & <span class="text-yellow-400">Expertise</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    A comprehensive toolkit built over 5+ years of hands-on experience
+                </p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Web Development -->
+                <div class="scroll-reveal bg-gray-900 border border-gray-800 rounded-2xl p-8">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="p-3 bg-yellow-400/10 rounded-lg">
+                            <i data-lucide="code" class="w-8 h-8 text-yellow-400"></i>
+                        </div>
+                        <h3 class="text-white font-bold text-2xl">Web Development</h3>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">React.js</span>
+                                <span class="text-yellow-400 font-bold">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-yellow-400 to-yellow-300 h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">Webflow</span>
+                                <span class="text-yellow-400 font-bold">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-yellow-400 to-yellow-300 h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">Shopify</span>
+                                <span class="text-yellow-400 font-bold">92%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-yellow-400 to-yellow-300 h-3 rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">WordPress</span>
+                                <span class="text-yellow-400 font-bold">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-yellow-400 to-yellow-300 h-3 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="scroll-reveal bg-gray-900 border border-gray-800 rounded-2xl p-8">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="p-3 bg-cyan-400/10 rounded-lg">
+                            <i data-lucide="megaphone" class="w-8 h-8 text-cyan-400"></i>
+                        </div>
+                        <h3 class="text-white font-bold text-2xl">Digital Marketing</h3>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">Meta Ads (Facebook & Instagram)</span>
+                                <span class="text-cyan-400 font-bold">98%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-cyan-400 to-cyan-300 h-3 rounded-full" style="width: 98%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">Google Ads</span>
+                                <span class="text-cyan-400 font-bold">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-cyan-400 to-cyan-300 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">YouTube Ads</span>
+                                <span class="text-cyan-400 font-bold">82%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-cyan-400 to-cyan-300 h-3 rounded-full" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">Conversion Optimization</span>
+                                <span class="text-cyan-400 font-bold">94%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-cyan-400 to-cyan-300 h-3 rounded-full" style="width: 94%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Automation -->
+                <div class="scroll-reveal bg-gray-900 border border-gray-800 rounded-2xl p-8">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="p-3 bg-yellow-400/10 rounded-lg">
+                            <i data-lucide="bot" class="w-8 h-8 text-yellow-400"></i>
+                        </div>
+                        <h3 class="text-white font-bold text-2xl">AI & Automation</h3>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">GPT Integration</span>
+                                <span class="text-yellow-400 font-bold">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-yellow-400 to-yellow-300 h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">Claude AI</span>
+                                <span class="text-yellow-400 font-bold">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-yellow-400 to-yellow-300 h-3 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">Gemini</span>
+                                <span class="text-yellow-400 font-bold">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-yellow-400 to-yellow-300 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300 font-medium">Workflow Automation</span>
+                                <span class="text-yellow-400 font-bold">92%</span>
+                            </div>
+                            <div class="w-full bg-gray-800 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-yellow-400 to-yellow-300 h-3 rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Journey Timeline -->
+    <section class="py-20 px-6 bg-gradient-to-b from-black to-gray-900/50">
+        <div class="max-w-5xl mx-auto">
+            <div class="scroll-reveal text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Professional <span class="text-yellow-400">Journey</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    From curious beginner to full-stack growth partner
+                </p>
+            </div>
+
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-yellow-400 via-cyan-400 to-yellow-400"></div>
+
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- 2020 -->
+                    <div class="scroll-reveal relative">
+                        <div class="md:flex md:items-center md:justify-between">
+                            <div class="md:w-5/12 md:text-right md:pr-12">
+                                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-yellow-400 transition-all">
+                                    <div class="text-yellow-400 font-bold text-xl mb-2">2020</div>
+                                    <h3 class="text-white font-bold text-lg mb-3">Started Freelancing</h3>
+                                    <p class="text-gray-400">Began journey in web development, taking on first client projects and learning the fundamentals of digital marketing.</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-yellow-400 rounded-full border-4 border-black"></div>
+                            <div class="md:w-5/12"></div>
+                        </div>
+                    </div>
+
+                    <!-- 2021 -->
+                    <div class="scroll-reveal relative">
+                        <div class="md:flex md:items-center md:justify-between">
+                            <div class="md:w-5/12"></div>
+                            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-cyan-400 rounded-full border-4 border-black"></div>
+                            <div class="md:w-5/12 md:pl-12">
+                                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-400 transition-all">
+                                    <div class="text-cyan-400 font-bold text-xl mb-2">2021</div>
+                                    <h3 class="text-white font-bold text-lg mb-3">First Major Success</h3>
+                                    <p class="text-gray-400">Achieved breakthrough with Decor Bae, generating ₹22+ lakhs in sales through integrated web design and ad campaigns.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2022 -->
+                    <div class="scroll-reveal relative">
+                        <div class="md:flex md:items-center md:justify-between">
+                            <div class="md:w-5/12 md:text-right md:pr-12">
+                                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-yellow-400 transition-all">
+                                    <div class="text-yellow-400 font-bold text-xl mb-2">2022</div>
+                                    <h3 class="text-white font-bold text-lg mb-3">Full-Service Agency Model</h3>
+                                    <p class="text-gray-400">Expanded offerings to include end-to-end solutions, from design to deployment to performance marketing.</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-yellow-400 rounded-full border-4 border-black"></div>
+                            <div class="md:w-5/12"></div>
+                        </div>
+                    </div>
+
+                    <!-- 2024 -->
+                    <div class="scroll-reveal relative">
+                        <div class="md:flex md:items-center md:justify-between">
+                            <div class="md:w-5/12"></div>
+                            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-cyan-400 rounded-full border-4 border-black"></div>
+                            <div class="md:w-5/12 md:pl-12">
+                                <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-400 transition-all">
+                                    <div class="text-cyan-400 font-bold text-xl mb-2">2024</div>
+                                    <h3 class="text-white font-bold text-lg mb-3">AI Integration & Advanced Automation</h3>
+                                    <p class="text-gray-400">Pioneered AI-powered solutions, integrating GPT, Claude, and custom automation to deliver next-gen digital experiences.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="scroll-reveal text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                    What <span class="text-yellow-400">I Do</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Comprehensive digital solutions that drive real business growth
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Web Development Card -->
+                <div class="scroll-reveal group bg-gray-900 border border-gray-800 hover:border-yellow-400 rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105">
+                    <div class="p-4 bg-yellow-400/10 rounded-xl w-fit mb-6 group-hover:bg-yellow-400/20 transition-all float-animation">
+                        <i data-lucide="monitor" class="w-10 h-10 text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-2xl mb-4">Web Development</h3>
+                    <p class="text-gray-400 mb-6">
+                        Build lightning-fast, conversion-optimized websites that turn visitors into customers. From custom code to no-code platforms.
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i data-lucide="check" class="w-4 h-4 text-yellow-400"></i>
+                            <span>React.js, Next.js, Tailwind</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i data-lucide="check" class="w-4 h-4 text-yellow-400"></i>
+                            <span>Webflow, Shopify, WordPress</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i data-lucide="check" class="w-4 h-4 text-yellow-400"></i>
+                            <span>E-commerce & Landing Pages</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing Card -->
+                <div class="scroll-reveal group bg-gray-900 border border-gray-800 hover:border-cyan-400 rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105">
+                    <div class="p-4 bg-cyan-400/10 rounded-xl w-fit mb-6 group-hover:bg-cyan-400/20 transition-all float-animation" style="animation-delay: 0.2s;">
+                        <i data-lucide="bar-chart-3" class="w-10 h-10 text-cyan-400"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-2xl mb-4">Digital Marketing</h3>
+                    <p class="text-gray-400 mb-6">
+                        Data-driven ad campaigns that consistently deliver 300%+ ROI. Specializing in Meta, Google, and YouTube advertising.
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i>
+                            <span>Facebook & Instagram Ads</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i>
+                            <span>Google & YouTube Campaigns</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i data-lucide="check" class="w-4 h-4 text-cyan-400"></i>
+                            <span>Conversion Rate Optimization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Solutions Card -->
+                <div class="scroll-reveal group bg-gray-900 border border-gray-800 hover:border-yellow-400 rounded-2xl p-8 transition-all duration-300 hover:transform hover:scale-105">
+                    <div class="p-4 bg-yellow-400/10 rounded-xl w-fit mb-6 group-hover:bg-yellow-400/20 transition-all float-animation" style="animation-delay: 0.4s;">
+                        <i data-lucide="cpu" class="w-10 h-10 text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-white font-bold text-2xl mb-4">AI Solutions</h3>
+                    <p class="text-gray-400 mb-6">
+                        Cutting-edge AI integration and automation that saves time, reduces costs, and scales your business effortlessly.
+                    </p>
+                    <div class="space-y-2">
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i data-lucide="check" class="w-4 h-4 text-yellow-400"></i>
+                            <span>GPT, Claude, Gemini Integration</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i data-lucide="check" class="w-4 h-4 text-yellow-400"></i>
+                            <span>Workflow Automation</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm text-gray-500">
+                            <i data-lucide="check" class="w-4 h-4 text-yellow-400"></i>
+                            <span>AI-Powered Chatbots</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats Section -->
+    <section class="py-20 px-6 bg-gradient-to-b from-black to-gray-900/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="scroll-reveal text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Results That <span class="text-yellow-400">Speak</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="scroll-reveal text-center bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-yellow-400 transition-all">
+                    <div class="text-4xl sm:text-5xl font-bold text-yellow-400 mb-2">₹22L+</div>
+                    <div class="text-gray-400 text-sm sm:text-base">Sales Generated</div>
+                </div>
+
+                <div class="scroll-reveal text-center bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-400 transition-all">
+                    <div class="text-4xl sm:text-5xl font-bold text-cyan-400 mb-2">50+</div>
+                    <div class="text-gray-400 text-sm sm:text-base">Websites Built</div>
+                </div>
+
+                <div class="scroll-reveal text-center bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-yellow-400 transition-all">
+                    <div class="text-4xl sm:text-5xl font-bold text-yellow-400 mb-2">300%</div>
+                    <div class="text-gray-400 text-sm sm:text-base">Average ROI</div>
+                </div>
+
+                <div class="scroll-reveal text-center bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-400 transition-all">
+                    <div class="text-4xl sm:text-5xl font-bold text-cyan-400 mb-2">5+</div>
+                    <div class="text-gray-400 text-sm sm:text-base">Years Experience</div>
+                </div>
+
+                <div class="scroll-reveal text-center bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-yellow-400 transition-all">
+                    <div class="text-4xl sm:text-5xl font-bold text-yellow-400 mb-2">100+</div>
+                    <div class="text-gray-400 text-sm sm:text-base">Happy Clients</div>
+                </div>
+
+                <div class="scroll-reveal text-center bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-400 transition-all">
+                    <div class="text-4xl sm:text-5xl font-bold text-cyan-400 mb-2">5+</div>
+                    <div class="text-gray-400 text-sm sm:text-base">Certifications</div>
+                </div>
+
+                <div class="scroll-reveal text-center bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-yellow-400 transition-all">
+                    <div class="text-4xl sm:text-5xl font-bold text-yellow-400 mb-2">24hr</div>
+                    <div class="text-gray-400 text-sm sm:text-base">Response Time</div>
+                </div>
+
+                <div class="scroll-reveal text-center bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-400 transition-all">
+                    <div class="text-4xl sm:text-5xl font-bold text-cyan-400 mb-2">24/7</div>
+                    <div class="text-gray-400 text-sm sm:text-base">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Me Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="scroll-reveal text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Why Partner <span class="text-yellow-400">With Me?</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Benefits that set this collaboration apart from typical agencies
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="scroll-reveal flex items-start gap-4 bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-yellow-400 transition-all">
+                    <div class="p-3 bg-yellow-400/10 rounded-lg flex-shrink-0">
+                        <i data-lucide="users" class="w-6 h-6 text-yellow-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-2">Direct Communication</h3>
+                        <p class="text-gray-400 text-sm">No middlemen, no miscommunication. Work directly with the person building your project.</p>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal flex items-start gap-4 bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-400 transition-all">
+                    <div class="p-3 bg-cyan-400/10 rounded-lg flex-shrink-0">
+                        <i data-lucide="zap" class="w-6 h-6 text-cyan-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-2">Fast Turnaround</h3>
+                        <p class="text-gray-400 text-sm">Agile workflow means quicker iterations, faster launches, and rapid optimizations.</p>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal flex items-start gap-4 bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-yellow-400 transition-all">
+                    <div class="p-3 bg-yellow-400/10 rounded-lg flex-shrink-0">
+                        <i data-lucide="dollar-sign" class="w-6 h-6 text-yellow-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-2">Cost-Effective</h3>
+                        <p class="text-gray-400 text-sm">Get agency-level quality without the agency markup. Better value, same excellence.</p>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal flex items-start gap-4 bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-400 transition-all">
+                    <div class="p-3 bg-cyan-400/10 rounded-lg flex-shrink-0">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-cyan-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-2">Proven Track Record</h3>
+                        <p class="text-gray-400 text-sm">Real results, real revenue. Not just promises—documented success stories.</p>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal flex items-start gap-4 bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-yellow-400 transition-all">
+                    <div class="p-3 bg-yellow-400/10 rounded-lg flex-shrink-0">
+                        <i data-lucide="settings" class="w-6 h-6 text-yellow-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-2">Full-Stack Expertise</h3>
+                        <p class="text-gray-400 text-sm">One person who understands design, development, and marketing—seamless integration.</p>
+                    </div>
+                </div>
+
+                <div class="scroll-reveal flex items-start gap-4 bg-gray-900 border border-gray-800 rounded-2xl p-6 hover:border-cyan-400 transition-all">
+                    <div class="p-3 bg-cyan-400/10 rounded-lg flex-shrink-0">
+                        <i data-lucide="refresh-cw" class="w-6 h-6 text-cyan-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-2">Continuous Optimization</h3>
+                        <p class="text-gray-400 text-sm">Projects don't end at launch. Ongoing tweaks and improvements based on real data.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-gradient-to-b from-black to-gray-900/50">
+        <div class="max-w-5xl mx-auto">
+            <div class="scroll-reveal text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Let's <span class="text-yellow-400">Connect</span>
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-2">
+                    Ready to start your project? Choose your preferred way to reach out.
+                </p>
+                <span class="text-sm text-gray-500">Typically responds within 24 hours</span>
+            </div>
+
+            <!-- Contact Methods Grid -->
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <!-- Email -->
+                <a href="mailto:parveenkm8989.pb@gmail.com" class="group bg-gradient-to-r from-white to-yellow-400 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/50">
+                    <div class="flex items-center gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="src/assets/Logo/gmail.png" alt="Email" class="w-16 h-16 object-contain">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-black font-bold text-2xl mb-1">Email</h3>
+                            <p class="text-gray-800 break-all text-sm">parveenkm8989.pb@gmail.com</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Phone Call -->
+                <a href="tel:+919878878535" class="group bg-gradient-to-r from-white to-blue-600 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/50">
+                    <div class="flex items-center gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="src/assets/Logo/calling.png" alt="Call" class="w-16 h-16 object-contain">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-white font-bold text-2xl mb-1">Call</h3>
+                            <p class="text-gray-100">+91 9878878535</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/919878878535?text=Hi%20Parveen,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" class="group bg-gradient-to-r from-white to-green-500 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/50">
+                    <div class="flex items-center gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="src/assets/Logo/watsapp.png" alt="WhatsApp" class="w-16 h-16 object-contain">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-white font-bold text-2xl mb-1">WhatsApp</h3>
+                            <p class="text-gray-100">+91 9878878535</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/parveen-kumar-mourya-web-pormotion/" target="_blank" class="group bg-gradient-to-r from-white to-blue-700 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:shadow-blue-700/50">
+                    <div class="flex items-center gap-6">
+                        <div class="flex-shrink-0">
+                            <img src="src/assets/Logo/linkedin.png" alt="LinkedIn" class="w-16 h-16 object-contain">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-white font-bold text-2xl mb-1">LinkedIn</h3>
+                            <p class="text-gray-100 text-sm">View my profile</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Instagram -->
+            <div class="scroll-reveal">
+                <a href="https://www.instagram.com/mr.mourya_webntech/" target="_blank" class="group bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/50 flex items-center justify-center gap-6">
+                    <div class="flex-shrink-0">
+                        <img src="src/assets/Logo/instagram.png" alt="Instagram" class="w-16 h-16 object-contain">
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h3 class="text-white font-bold text-2xl mb-1">Follow on Instagram</h3>
+                        <p class="text-white text-sm">@mr.mourya_webntech</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <!-- Main Footer Content -->
+            <div class="text-center mb-8">
+                <div class="text-2xl sm:text-3xl font-bold tracking-tighter leading-tight mb-2">
+                    <span class="text-white">Mr. Mourya</span>
+                    <span class="text-cyan-400 ml-2">web and tech</span>
+                </div>
+                <p class="text-xs text-gray-500 mb-6">Building digital experiences that drive real revenue</p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="mb-8">
+                <h3 class="text-gray-400 text-xs uppercase tracking-wider mb-4 text-center font-semibold">Quick Links</h3>
+                <div class="flex justify-center items-center gap-3 text-gray-500 text-sm flex-wrap">
+                    <a href="index.html#home" class="hover:text-yellow-400 transition-colors">Home</a>
+                    <span class="text-gray-700">•</span>
+                    <a href="about.html" class="hover:text-yellow-400 transition-colors">About</a>
+                    <span class="text-gray-700">•</span>
+                    <a href="index.html#work" class="hover:text-yellow-400 transition-colors">Work</a>
+                    <span class="text-gray-700">•</span>
+                    <a href="projects.html" class="hover:text-yellow-400 transition-colors">Projects</a>
+                </div>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="mb-8">
+                <div class="flex justify-center items-center gap-4">
+                    <a href="https://www.linkedin.com/in/parveen-kumar-mourya-web-pormotion/" target="_blank" class="text-gray-500 hover:text-cyan-400 transition-colors">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mr.mourya_webntech/" target="_blank" class="text-gray-500 hover:text-pink-400 transition-colors">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://wa.me/919878878535" target="_blank" class="text-gray-500 hover:text-green-400 transition-colors">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    </a>
+                    <a href="mailto:parveenkm8989.pb@gmail.com" class="text-gray-500 hover:text-yellow-400 transition-colors">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-6">
+                <p class="text-center text-gray-500 text-xs">
+                    &copy; 2025 Mr. Mourya Web and Tech. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-gray-900', 'border-b', 'border-gray-800', 'py-4');
+                navbar.classList.remove('py-6');
+            } else {
+                navbar.classList.remove('bg-gray-900', 'border-b', 'border-gray-800', 'py-4');
+                navbar.classList.add('py-6');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll reveal animation
+        const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+        
+        const revealOnScroll = () => {
+            scrollRevealElements.forEach((element) => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        };
+
+        // Initial check
+        revealOnScroll();
+        
+        // On scroll
+        window.addEventListener('scroll', revealOnScroll);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
