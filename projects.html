@@ -37,12 +37,10 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-white">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
+            <button id="menu-btn" class="md:hidden text-white flex flex-col gap-1.5 w-6 h-6 justify-center">
+                <span class="block w-full h-0.5 bg-white rounded"></span>
+                <span class="block w-full h-0.5 bg-white rounded"></span>
+                <span class="block w-full h-0.5 bg-white rounded"></span>
             </button>
         </div>
 
@@ -160,28 +158,119 @@
         </div>
     </section>
 
-    <!-- Back to Home CTA -->
-    <section class="py-24 bg-black border-t border-gray-700">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-8">Ready to Work Together?</h2>
-            <p class="text-gray-400 max-w-2xl mx-auto text-lg mb-8">
-                Let's discuss how I can help bring your vision to life.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="index.html#contact" class="px-8 py-3 bg-yellow-400 text-black font-bold rounded-lg hover:bg-yellow-300 transition-all hover:shadow-lg hover:shadow-yellow-400/50">
-                    Get In Touch
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 px-6 bg-gradient-to-b from-black to-gray-900/50">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+                    Let's <span class="text-yellow-400">Connect</span>
+                </h2>
+                <p class="text-gray-400 text-base max-w-2xl mx-auto mb-2">
+                    Ready to start your project? Choose your preferred way to reach out.
+                </p>
+                <span class="text-xs text-gray-500">Typically responds within 24 hours</span>
+            </div>
+
+            <!-- Contact Methods Grid -->
+            <div class="grid md:grid-cols-2 gap-4 mb-8">
+                <!-- Email -->
+                <a href="mailto:parveenkm8989.pb@gmail.com" class="group bg-gradient-to-r from-white to-yellow-400 rounded-xl p-5 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/50">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <img src="src/assets/Logo/gmail.png" alt="Email" class="w-12 h-12 object-contain">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-black font-bold text-lg mb-1">Email</h3>
+                            <p class="text-gray-800 break-all text-xs">parveenkm8989.pb@gmail.com</p>
+                        </div>
+                    </div>
                 </a>
-                <a href="index.html" class="px-8 py-3 bg-gray-900 border border-gray-700 text-white font-bold rounded-lg hover:border-yellow-400 transition-all hover:shadow-lg hover:shadow-yellow-400/20">
-                    Back to Home
+
+                <!-- Phone Call -->
+                <a href="tel:+919878878535" class="group bg-gradient-to-r from-white to-blue-600 rounded-xl p-5 transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/50">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <img src="src/assets/Logo/calling.png" alt="Call" class="w-12 h-12 object-contain">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-white font-bold text-lg mb-1">Call</h3>
+                            <p class="text-gray-100 text-sm">+91 9878878535</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/919878878535?text=Hi%20Parveen,%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" class="group bg-gradient-to-r from-white to-green-500 rounded-xl p-5 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/50">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <img src="src/assets/Logo/watsapp.png" alt="WhatsApp" class="w-12 h-12 object-contain">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-white font-bold text-lg mb-1">WhatsApp</h3>
+                            <p class="text-gray-100 text-sm">+91 9878878535</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/parveen-kumar-mourya-web-pormotion/" target="_blank" class="group bg-gradient-to-r from-white to-blue-700 rounded-xl p-5 transition-all duration-300 hover:shadow-lg hover:shadow-blue-700/50">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <img src="src/assets/Logo/linkedin.png" alt="LinkedIn" class="w-12 h-12 object-contain">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-white font-bold text-lg mb-1">LinkedIn</h3>
+                            <p class="text-gray-100 text-xs">View my profile</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/mr.mourya_webntech/" target="_blank" class="group bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 rounded-xl p-5 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/50">
+                    <div class="flex items-center gap-4">
+                        <div class="flex-shrink-0">
+                            <img src="src/assets/Logo/instagram.png" alt="Instagram" class="w-12 h-12 object-contain">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-white font-bold text-lg mb-1">Instagram</h3>
+                            <p class="text-white text-xs">@mr.mourya_webntech</p>
+                        </div>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-950 border-t border-gray-700 py-8">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-gray-500 text-sm">© 2025 Mr. Parveen Kumar Mourya. All rights reserved.</p>
+    <footer class="bg-gray-900 text-white py-12 px-6 border-t border-gray-700">
+        <div class="max-w-7xl mx-auto">
+            <!-- Branding -->
+            <div class="text-center mb-8">
+                <div class="text-2xl sm:text-3xl font-bold tracking-tighter leading-tight mb-2">
+                    <span class="text-white">Mr. Mourya</span>
+                    <span class="text-cyan-400 ml-2">web and tech</span>
+                </div>
+                <p class="text-gray-400 text-sm italic">Building digital experiences that drive real revenue</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="mb-8">
+                <h4 class="text-center text-gray-400 text-sm font-bold mb-4 uppercase tracking-wider">Quick Links</h4>
+                <div class="flex justify-center items-center gap-3 text-gray-300 text-sm flex-wrap">
+                    <a href="index.html#home" class="hover:text-yellow-400 transition-colors font-medium">Home</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="about.html" class="hover:text-yellow-400 transition-colors font-medium">About</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="index.html#work" class="hover:text-yellow-400 transition-colors font-medium">Work</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="projects.html" class="hover:text-yellow-400 transition-colors font-medium">Projects</a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-gray-500 text-xs pt-6 border-t border-gray-700">
+                © 2025 Mr. Mourya Web and Tech. All rights reserved.
+            </div>
         </div>
     </footer>
 
