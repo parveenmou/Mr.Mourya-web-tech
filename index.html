@@ -54,7 +54,7 @@
     </nav>
 
     <!-- Contact Popup Modal -->
-    <div id="contact-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div id="contact-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
         <div class="bg-gray-900 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-gray-800 relative">
             <!-- Close Button -->
             <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors z-10">
@@ -706,23 +706,30 @@
         const letsTalkBtn = document.getElementById('lets-talk-btn');
         const letsTalkMobileBtn = document.getElementById('lets-talk-mobile-btn');
         const closeModal = document.getElementById('close-modal');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
         // Open modal
         if (letsTalkBtn) {
-            letsTalkBtn.addEventListener('click', () => {
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                document.body.style.overflow = 'hidden';
+            letsTalkBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (modal) {
+                    modal.style.display = 'flex';
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
             });
         }
 
         if (letsTalkMobileBtn) {
-            letsTalkMobileBtn.addEventListener('click', () => {
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                document.body.style.overflow = 'hidden';
+            letsTalkMobileBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (modal) {
+                    modal.style.display = 'flex';
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
                 // Close mobile menu
-                const mobileMenu = document.getElementById('mobile-menu');
                 if (mobileMenu) {
                     mobileMenu.classList.add('hidden');
                 }
@@ -732,9 +739,11 @@
         // Close modal
         if (closeModal) {
             closeModal.addEventListener('click', () => {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                document.body.style.overflow = 'auto';
+                if (modal) {
+                    modal.style.display = 'none';
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
             });
         }
 
@@ -742,8 +751,8 @@
         if (modal) {
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) {
+                    modal.style.display = 'none';
                     modal.classList.add('hidden');
-                    modal.classList.remove('flex');
                     document.body.style.overflow = 'auto';
                 }
             });
@@ -752,11 +761,18 @@
         // Close modal with Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+                modal.style.display = 'none';
                 modal.classList.add('hidden');
-                modal.classList.remove('flex');
                 document.body.style.overflow = 'auto';
             }
         });
+
+        // Mobile menu toggle
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
     </script>
 
     <!-- Link to JS Logic -->
