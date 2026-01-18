@@ -58,21 +58,42 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-white flex flex-col gap-1.5 w-6 h-6 justify-center">
-                <span class="block w-full h-0.5 bg-white rounded"></span>
-                <span class="block w-full h-0.5 bg-white rounded"></span>
-                <span class="block w-full h-0.5 bg-white rounded"></span>
+            <button id="menu-btn" class="md:hidden text-white flex flex-col gap-1.5 w-6 h-6 justify-center z-[60] relative">
+                <span class="block w-full h-0.5 bg-white rounded transition-all duration-300"></span>
+                <span class="block w-full h-0.5 bg-white rounded transition-all duration-300"></span>
+                <span class="block w-full h-0.5 bg-white rounded transition-all duration-300"></span>
             </button>
         </div>
-
-        <!-- Mobile Nav Overlay -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-gray-900 border-b border-gray-700 p-6 flex flex-col space-y-4 shadow-2xl">
-            <a href="index.html#home" class="text-lg font-medium text-gray-300 hover:text-yellow-400">Home</a>
-            <a href="about.html" class="text-lg font-medium text-yellow-400">About</a>
-            <a href="projects.html" class="text-lg font-medium text-gray-300 hover:text-yellow-400">Work & Experience</a>
-            <button id="lets-talk-mobile-btn" class="text-lg font-medium text-gray-300 hover:text-yellow-400 text-left">Let's Talk</button>
-        </div>
     </nav>
+
+    <!-- Mobile Chat Bubble Menu -->
+    <div id="mobile-menu" class="fixed top-24 right-4 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-3xl shadow-2xl overflow-visible transform transition-all duration-500 ease-out z-[100] w-64" style="transform: translateX(calc(100% + 2rem)); opacity: 0; display: none;">
+        <!-- Chat Bubble Tail -->
+        <div class="absolute -top-2 right-6 w-4 h-4 bg-yellow-400 transform rotate-45"></div>
+        
+        <!-- Menu Content -->
+        <div class="p-6 flex flex-col space-y-4">
+            <a href="index.html#home" class="text-lg font-semibold text-black hover:text-gray-800 transition-colors flex items-center gap-3 hover:translate-x-1 transform duration-200">
+                <span class="text-2xl">🏠</span>
+                <span>Home</span>
+            </a>
+            <div class="border-t border-yellow-600/30"></div>
+            <a href="about.html" class="text-lg font-semibold text-black hover:text-gray-800 transition-colors flex items-center gap-3 hover:translate-x-1 transform duration-200">
+                <span class="text-2xl">👤</span>
+                <span>About</span>
+            </a>
+            <div class="border-t border-yellow-600/30"></div>
+            <a href="projects.html" class="text-lg font-semibold text-black hover:text-gray-800 transition-colors flex items-center gap-3 hover:translate-x-1 transform duration-200">
+                <span class="text-2xl">💼</span>
+                <span>Work & Experience</span>
+            </a>
+            <div class="border-t border-yellow-600/30"></div>
+            <button id="lets-talk-mobile-btn" class="text-lg font-semibold text-black hover:text-gray-800 transition-colors flex items-center gap-3 text-left hover:translate-x-1 transform duration-200">
+                <span class="text-2xl">💬</span>
+                <span>Let's Talk</span>
+            </button>
+        </div>
+    </div>
 
     <!-- Contact Popup Modal -->
     <div id="contact-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
@@ -968,8 +989,13 @@
                     document.body.style.overflow = 'hidden';
                 }
                 // Close mobile menu
-                if (mobileMenu) {
-                    mobileMenu.classList.add('hidden');
+                if (mobileMenu && menuBtn) {
+                    mobileMenu.style.transform = 'translateX(calc(100% + 2rem))';
+                    mobileMenu.style.opacity = '0';
+                    const spans = menuBtn.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
                 }
             });
         }
@@ -1005,10 +1031,73 @@
             }
         });
 
-        // Mobile menu toggle
+        // Mobile menu toggle with animation
         if (menuBtn && mobileMenu) {
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+            let isMenuOpen = false;
+            
+            menuBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                
+                isMenuOpen = !isMenuOpen;
+                
+                if (isMenuOpen) {
+                    mobileMenu.style.display = 'block';
+                    // Use setTimeout to ensure display:block is applied before transform
+                    setTimeout(() => {
+                        mobileMenu.style.transform = 'translateX(0)';
+                        mobileMenu.style.opacity = '1';
+                    }, 10);
+                    // Animate hamburger to X
+                    const spans = menuBtn.querySelectorAll('span');
+                    spans[0].style.transform = 'rotate(45deg) translateY(8px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translateY(-8px)';
+                } else {
+                    mobileMenu.style.transform = 'translateX(calc(100% + 2rem))';
+                    mobileMenu.style.opacity = '0';
+                    setTimeout(() => {
+                        if (!isMenuOpen) mobileMenu.style.display = 'none';
+                    }, 500);
+                    // Reset hamburger
+                    const spans = menuBtn.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (isMenuOpen && !mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                    isMenuOpen = false;
+                    mobileMenu.style.transform = 'translateX(calc(100% + 2rem))';
+                    mobileMenu.style.opacity = '0';
+                    setTimeout(() => {
+                        mobileMenu.style.display = 'none';
+                    }, 500);
+                    const spans = menuBtn.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+
+            // Close menu when clicking a link
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    isMenuOpen = false;
+                    mobileMenu.style.transform = 'translateX(calc(100% + 2rem))';
+                    mobileMenu.style.opacity = '0';
+                    setTimeout(() => {
+                        mobileMenu.style.display = 'none';
+                    }, 500);
+                    const spans = menuBtn.querySelectorAll('span');
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                });
             });
         }
 
