@@ -41,6 +41,7 @@
         .then(response => response.text())
         .then(data => {
             document.body.insertAdjacentHTML('afterbegin', data);
+            initHeaderFunctions();
         });
     
     // Load footer
@@ -49,6 +50,51 @@
         .then(data => {
             document.body.insertAdjacentHTML('beforeend', data);
         });
+
+    function initHeaderFunctions() {
+        const modal = document.getElementById('contact-modal');
+        const letsTalkBtn = document.getElementById('lets-talk-btn');
+        const letsTalkMobileBtn = document.getElementById('lets-talk-mobile-btn');
+        const closeModalBtn = document.getElementById('close-modal');
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function openModal() {
+            if (modal) {
+                modal.style.display = 'flex';
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                setTimeout(() => { modal.style.opacity = '1'; }, 10);
+            }
+        }
+
+        function closeModal() {
+            if (modal) {
+                modal.style.opacity = '0';
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }, 300);
+            }
+        }
+
+        if (letsTalkBtn) letsTalkBtn.addEventListener('click', function(e) { e.preventDefault(); openModal(); });
+        if (letsTalkMobileBtn) letsTalkMobileBtn.addEventListener('click', function(e) { e.preventDefault(); openModal(); if (mobileMenu) { mobileMenu.style.transform = 'translateX(calc(100% + 2rem))'; mobileMenu.style.opacity = '0'; setTimeout(() => { mobileMenu.style.display = 'none'; }, 300); } });
+        if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+        if (modal) modal.addEventListener('click', function(e) { if (e.target === modal) closeModal(); });
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape' && modal && modal.style.display === 'flex') closeModal(); });
+
+        if (menuBtn && mobileMenu) {
+            let isOpen = false;
+            menuBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                isOpen = !isOpen;
+                if (isOpen) { mobileMenu.style.display = 'block'; setTimeout(() => { mobileMenu.style.transform = 'translateX(0)'; mobileMenu.style.opacity = '1'; }, 10); }
+                else { mobileMenu.style.transform = 'translateX(calc(100% + 2rem))'; mobileMenu.style.opacity = '0'; setTimeout(() => { mobileMenu.style.display = 'none'; }, 300); }
+            });
+        }
+    }
 </script>
 </head>
 <body class="bg-black text-gray-300 font-sans selection:bg-yellow-400 selection:text-black">
