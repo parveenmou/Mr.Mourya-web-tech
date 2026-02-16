@@ -12,8 +12,8 @@
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Lucide Icons CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+    <!-- Lucide Icons CDN (deferred) -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest" defer></script>
     <!-- REPLACE THE ENTIRE <script> SECTION IN <head> WITH THIS -->
 
 <script>
@@ -311,16 +311,16 @@ function initHeaderFunctions() {
                         <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-3">Powered By</p>
                         <div class="flex gap-3">
                             <div class="icon-container">
-                                <img src="src/assets/Logo/shopify.jpg" alt="Shopify" title="Shopify">
+                                <img src="src/assets/Logo/shopify.jpg" alt="Shopify" title="Shopify" loading="lazy">
                             </div>
                             <div class="icon-container">
-                                <img src="src/assets/Logo/wordpress.jpg" alt="WordPress" title="WordPress">
+                                <img src="src/assets/Logo/wordpress.jpg" alt="WordPress" title="WordPress" loading="lazy">
                             </div>
                             <div class="icon-container">
-                                <img src="src/assets/Logo/react.png" alt="Webflow" title="Webflow">
+                                <img src="src/assets/Logo/react.png" alt="Webflow" title="Webflow" loading="lazy">
                             </div>
                             <div class="icon-container">
-                                <img src="src/assets/Logo/claude.jpg" alt="React" title="React & Modern Dev">
+                                <img src="src/assets/Logo/claude.jpg" alt="React" title="React & Modern Dev" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -352,13 +352,13 @@ function initHeaderFunctions() {
                         <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-3">Expertise In</p>
                         <div class="flex gap-3">
                             <div class="icon-container">
-                                <img src="src/assets/Logo/meta.jpg" alt="Meta Ads" title="Meta Ads">
+                                <img src="src/assets/Logo/meta.jpg" alt="Meta Ads" title="Meta Ads" loading="lazy">
                             </div>
                             <div class="icon-container">
-                                <img src="src/assets/Logo/google ads.jpg" alt="Google Ads" title="Google Ads">
+                                <img src="src/assets/Logo/google ads.jpg" alt="Google Ads" title="Google Ads" loading="lazy">
                             </div>
                             <div class="icon-container">
-                                <img src="src/assets/Logo/youtube.jpg" alt="YouTube Ads" title="YouTube Ads">
+                                <img src="src/assets/Logo/youtube.jpg" alt="YouTube Ads" title="YouTube Ads" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -391,16 +391,16 @@ function initHeaderFunctions() {
                         <p class="text-xs text-gray-500 uppercase tracking-wider font-semibold mb-3">Powered By</p>
                         <div class="flex gap-3">
                             <div class="icon-container">
-                                <img src="src/assets/Logo/claude.jpg" alt="Claude" title="Claude">
+                                <img src="src/assets/Logo/claude.jpg" alt="Claude" title="Claude" loading="lazy">
                             </div>
                             <div class="icon-container">
-                                <img src="src/assets/Logo/gpt.jpg" alt="GPT" title="GPT">
+                                <img src="src/assets/Logo/gpt.jpg" alt="GPT" title="GPT" loading="lazy">
                             </div>
                             <div class="icon-container">
-                                <img src="src/assets/Logo/gemini.jpg" alt="Gemini" title="Gemini">
+                                <img src="src/assets/Logo/gemini.jpg" alt="Gemini" title="Gemini" loading="lazy">
                             </div>
                             <div class="icon-container">
-                                <img src="src/assets/Logo/bolt.jpg" alt="Bolt" title="Bolt">
+                                <img src="src/assets/Logo/bolt.jpg" alt="Bolt" title="Bolt" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -456,7 +456,7 @@ function initHeaderFunctions() {
                         <div class="flex-1 overflow-hidden bg-white">
                             <picture>
                                 <source media="(max-width: 768px)" srcset="src/assets/burgebae-mobile.jpg">
-                                <img src="src/assets/burgerbae-desktop.png" alt="Burger Bae Website" class="w-full h-full object-cover">
+                                <img src="src/assets/burgerbae-desktop.png" alt="Burger Bae Website" class="w-full h-full object-cover" loading="lazy">
                             </picture>
                         </div>
                         <!-- Overlay on hover -->
@@ -505,7 +505,7 @@ function initHeaderFunctions() {
                         <div class="flex-1 overflow-hidden bg-white">
                             <picture>
                                 <source media="(max-width: 768px)" srcset="src/assets/balanceisthenewgreen-mobile.jpg">
-                                <img src="src/assets/balanceisthenewgreen-desktop.png" alt="Balance Is The New Green Website" class="w-full h-full object-cover">
+                                <img src="src/assets/balanceisthenewgreen-desktop.png" alt="Balance Is The New Green Website" class="w-full h-full object-cover" loading="lazy">
                             </picture>
                         </div>
                         <!-- Overlay on hover -->
@@ -554,7 +554,7 @@ function initHeaderFunctions() {
                         <div class="flex-1 overflow-hidden bg-white">
                             <picture>
                                 <source media="(max-width: 768px)" srcset="src/assets/decorbae-mobile.jpg">
-                                <img src="src/assets/decorbae-desktop.png" alt="Decor Bae Website" class="w-full h-full object-cover">
+                                <img src="src/assets/decorbae-desktop.png" alt="Decor Bae Website" class="w-full h-full object-cover" loading="lazy">
                             </picture>
                         </div>
                         <!-- Overlay on hover -->
@@ -603,7 +603,7 @@ function initHeaderFunctions() {
                         <div class="flex-1 overflow-hidden bg-white">
                             <picture>
                                 <source media="(max-width: 768px)" srcset="src/assets/urbanneeds-mobile.jpg">
-                                <img src="src/assets/urbanneeds-desktop.png" alt="Urban Needs Website" class="w-full h-full object-cover">
+                                <img src="src/assets/urbanneeds-desktop.png" alt="Urban Needs Website" class="w-full h-full object-cover" loading="lazy">
                             </picture>
                         </div>
                         <!-- Overlay on hover -->
@@ -637,6 +637,6 @@ function initHeaderFunctions() {
     </section>
 
     <!-- Link to JS Logic -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
