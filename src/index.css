@@ -1,0 +1,249 @@
+@import 'tailwindcss';
+
+/* ============================================
+   PORTFOLIO — GLOBAL STYLES (ported from styles.css)
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #d1d5db;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(250, 204, 21);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(253, 224, 71);
+}
+
+/* ========== SELECTION & FOCUS ========== */
+::selection {
+  background-color: rgb(250, 204, 21);
+  color: #000;
+}
+::-moz-selection {
+  background-color: rgb(250, 204, 21);
+  color: #000;
+}
+:focus-visible {
+  outline: 2px solid rgb(250, 204, 21);
+  outline-offset: 2px;
+}
+
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+/* ========== MOBILE FONT SIZE REDUCTION (10%) ========== */
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+/* ========== KEYFRAMES ========== */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes float-delay {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+@keyframes flowStream1 {
+  0%,
+  100% {
+    transform: translateX(-50px) translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(20px) translateY(-10px);
+    opacity: 0.8;
+  }
+}
+@keyframes flowStream2 {
+  0%,
+  100% {
+    transform: translateX(50px) translateY(10px);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateX(-20px) translateY(0);
+    opacity: 0.7;
+  }
+}
+@keyframes flowStream3 {
+  0%,
+  100% {
+    transform: translateY(20px) scaleX(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-10px) scaleX(1.1);
+    opacity: 0.6;
+  }
+}
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes borderDotMotion {
+  0% {
+    border-top-color: rgba(250, 204, 21, 1);
+    border-right-color: rgba(250, 204, 21, 0.3);
+    border-bottom-color: rgba(250, 204, 21, 0.3);
+    border-left-color: rgba(250, 204, 21, 0.3);
+  }
+  25% {
+    border-right-color: rgba(250, 204, 21, 1);
+  }
+  50% {
+    border-bottom-color: rgba(250, 204, 21, 1);
+  }
+  75% {
+    border-left-color: rgba(250, 204, 21, 1);
+  }
+  100% {
+    border-top-color: rgba(250, 204, 21, 1);
+  }
+}
+
+/* ========== FLOATING CARDS / BADGES ========== */
+.floating-card {
+  animation: float 3s ease-in-out infinite;
+}
+.floating-card-delay {
+  animation: float-delay 3s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+/* ========== ICON HOVER EFFECTS ========== */
+.icon-container {
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-container:hover {
+  transform: translateY(-6px) scale(1.15);
+}
+.icon-container img {
+  transition: filter 0.3s ease, transform 0.3s ease;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.icon-container:hover img {
+  filter: brightness(1.3) drop-shadow(0 0 8px rgba(250, 204, 21, 0.6));
+}
+
+/* ========== SCROLL REVEAL ========== */
+.scroll-animate {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.scroll-animate.visible {
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
+/* ========== NAVBAR ========== */
+#navbar {
+  background: #111827;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#navbar.scrolled {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== TYPEWRITER ========== */
+.typewriter-text {
+  display: inline-block;
+  line-height: 1.2;
+  min-height: 80px;
+  font-size: inherit;
+}
+.typewriter-text::after {
+  content: '|';
+  margin-left: 2px;
+  animation: pulse-soft 1s step-end infinite;
+}
+
+/* ========== PROJECT BOXES ========== */
+.project-box {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.project-box:hover {
+  transform: translateY(-4px);
+}
+
+/* ========== MOBILE ANIMATED CARD BORDER ========== */
+@media (max-width: 768px) {
+  .scroll-animate,
+  .scroll-animate.visible {
+    opacity: 1 !important;
+    border: 2px solid rgba(250, 204, 21, 0.8) !important;
+    animation: borderDotMotion 4s linear infinite !important;
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.3),
+      inset 0 0 10px rgba(250, 204, 21, 0.05) !important;
+    transform: none !important;
+  }
+}
