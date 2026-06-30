@@ -72,6 +72,20 @@ export const FEATURED_PROJECTS = [
     ],
   },
   {
+    title: 'Confidence Clothing',
+    url: 'https://www.confidenceclothing.com/',
+    domain: 'confidenceclothing.com',
+    desktop: '/assets/confidenceclothing-desktop.png',
+    mobile: '/assets/confidenceclothing-mobile.jpg',
+    overlay: 'text-yellow-400',
+    desc: 'Created the website for Confidence Clothing and built many web apps for AI automation—streamlining operations, content, and internal workflows to scale the brand efficiently.',
+    tags: [
+      { label: 'Website Building', color: 'yellow' },
+      { label: 'AI Automation', color: 'blue' },
+      { label: 'Web Apps', color: 'green' },
+    ],
+  },
+  {
     title: 'Balance Is The New Green',
     url: 'https://balanceisthenewgreen.com/',
     domain: 'balanceisthenewgreen.com',
@@ -83,20 +97,6 @@ export const FEATURED_PROJECTS = [
       { label: 'Webflow', color: 'yellow' },
       { label: 'Ui/Ux design', color: 'blue' },
       { label: 'Ai Visualizations', color: 'green' },
-    ],
-  },
-  {
-    title: 'Decor Bae',
-    url: 'https://www.decorbae.shop/',
-    domain: 'decorbae.shop',
-    desktop: '/assets/decorbae-desktop.png',
-    mobile: '/assets/decorbae-mobile.jpg',
-    overlay: 'text-pink-400',
-    desc: 'Created the website and managed Meta Ads, brand promotion, and operations for Decor Bae, scaling sales from zero to ₹2 lakh in just 2 months.',
-    tags: [
-      { label: 'Shopify', color: 'yellow' },
-      { label: 'Meta Ads', color: 'blue' },
-      { label: 'High-performance Sales', color: 'green' },
     ],
   },
   {

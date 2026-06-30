@@ -248,7 +248,7 @@ export default function Home() {
 
           <div
             dir="rtl"
-            className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6 -mx-6 px-6 scroll-px-6 [scrollbar-width:thin]"
+            className="no-scrollbar flex gap-6 overflow-x-auto snap-x snap-mandatory pb-2 -mx-6 px-6 scroll-px-6"
           >
             {FEATURED_PROJECTS.map((p) => (
               <a

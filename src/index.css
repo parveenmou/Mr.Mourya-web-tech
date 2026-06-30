@@ -247,3 +247,12 @@ button {
     transform: none !important;
   }
 }
+
+/* ========== HIDE SCROLLBAR (horizontal card scrollers) ========== */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;            /* Chrome, Safari, Opera */
+}
